@@ -3,7 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import Nav from "../components/nav";
+import Faq from '@/components/landing/faq'
 import Footer from '@/components/footer'
+
 
 export const metadata: Metadata = {
   title: "Lumora Home V1 - Webflow HTML website template",
@@ -62,6 +64,7 @@ export default function RootLayout({
           <Nav />
           <main className="main-wrapper">
             {children}
+            <Faq />
             <Footer />
           </main>
         </div>

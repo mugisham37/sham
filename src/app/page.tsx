@@ -5,7 +5,7 @@ import Solutions from '@/components/landing/solutions'
 import Tools from '@/components/landing/tools'
 import Automation from '@/components/landing/automation'
 import Testimonial from '@/components/landing/testimonial'
-import Faq from '@/components/landing/faq'
+
 
 const page = () => {
   return (
@@ -16,7 +16,6 @@ const page = () => {
       <Tools />
       <Automation />
       <Testimonial />
-      <Faq />
     </>
   )
 }
