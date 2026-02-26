@@ -57,44 +57,19 @@ const footer = () => {
                                             loading="lazy" alt="icon" className="icon-size grey---small-8" /></a></div>
                             </div>
                             <div id="w-node-b59d6d23-654a-da14-ef92-1dcdb0be63c9-b0be639e" className="footer_links-layout">
-                                <div className="footer_links"><a href="/home/home-v1" aria-current="page"
+                                <div className="footer_links"><a href="/" aria-current="page"
                                         className="footer_link w-inline-block w--current">
-                                        <div>Home V.1</div>
-                                    </a><a href="/home/home-v2" className="footer_link w-inline-block">
-                                        <div>Home V.2</div>
-                                    </a><a href="/home/home-v3" className="footer_link w-inline-block">
-                                        <div>Home V.3</div>
-                                    </a><a href="/about/about-us-v-1" className="footer_link w-inline-block">
-                                        <div>About Us V.1</div>
-                                    </a><a href="/about/about-us-v-2" className="footer_link w-inline-block">
-                                        <div>About Us V.2</div>
-                                    </a><a href="/about/about-us-v-3" className="footer_link w-inline-block">
-                                        <div>About Us V.3</div>
+                                        <div>Home</div>
+                                    </a><a href="/about" className="footer_link w-inline-block">
+                                        <div>About</div>
+                                    </a><a href="/contact" className="footer_link w-inline-block">
+                                        <div>Contact</div>
                                     </a></div>
                                 <div id="w-node-b59d6d23-654a-da14-ef92-1dcdb0be63dd-b0be639e" className="footer_links"><a
-                                        href="/contact/contact-us-v-1" className="footer_link w-inline-block">
-                                        <div>Contact V.1</div>
-                                    </a><a href="/contact/contact-us-v-2" className="footer_link w-inline-block">
-                                        <div>Contact V.2</div>
-                                    </a><a href="/contact/contact-us-v-3" className="footer_link w-inline-block">
-                                        <div>Contact V.3</div>
+                                        href="/features" className="footer_link w-inline-block">
+                                        <div>Features</div>
                                     </a><a href="/pricing" className="footer_link w-inline-block">
                                         <div>Pricing</div>
-                                    </a><a href="/features" className="footer_link w-inline-block">
-                                        <div>Features</div>
-                                    </a><a href="/blog" className="footer_link w-inline-block">
-                                        <div>Blogs</div>
-                                    </a></div>
-                                <div id="w-node-b59d6d23-654a-da14-ef92-1dcdb0be63f0-b0be639e" className="footer_links"><a
-                                        href="https://lumora-template.webflow.io/blogs/maximizing-your-marketing-roi"
-                                        target="_blank" className="footer_link w-inline-block">
-                                        <div>Blog Post</div>
-                                    </a><a href="/template/style-guide" className="footer_link w-inline-block">
-                                        <div>Style Guide</div>
-                                    </a><a href="/template/changelog" className="footer_link w-inline-block">
-                                        <div>Changelog</div>
-                                    </a><a href="/template/licensing" className="footer_link w-inline-block">
-                                        <div>Licensing</div>
                                     </a></div>
                             </div>
                         </div>

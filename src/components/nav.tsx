@@ -15,17 +15,17 @@ const Nav = () => {
                         <div className="nav_wrap"
                             style={{translate: 'none', rotate: 'none', scale: 'none', opacity: 1, transform: 'translate3d(0px, 0%, 0px)'}}>
                             <nav role="navigation" className="nav_mobile w-nav-menu">
-                                <div className="navbar_list"><a href="/home/home-v1" aria-current="page"
-                                        className="nav_links w-nav-link w--current">Home V.1</a><a
-                                        href="/about/about-us-v-1" className="nav_links w-nav-link">About Us V.1</a><a
-                                        href="/contact/contact-us-v-1" className="nav_links w-nav-link">Contact Us V.1</a>
+                                <div className="navbar_list"><a href="/" aria-current="page"
+                                        className="nav_links w-nav-link w--current">Home</a><a
+                                        href="/about" className="nav_links w-nav-link">About</a><a
+                                        href="/contact" className="nav_links w-nav-link">Contact</a>
                                     <div data-delay="0" data-hover="false"
                                         data-w-id="cee9bcd6-eb55-df4f-bee8-ab13311e7e12"
                                         className="nav_dropdown w-dropdown">
                                         <div className="nav_links is-dropdown w-dropdown-toggle" id="w-dropdown-toggle-0"
                                             aria-controls="w-dropdown-list-0" aria-haspopup="menu" aria-expanded="false"
                                             role="button" tabIndex={0}>
-                                            <div className="text-block">More Links</div>
+                                            <div className="text-block">More</div>
                                             <div className="nav_link-icon w-icon-dropdown-toggle" aria-hidden="true"
                                                 style={{transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
                                             </div>
@@ -34,40 +34,11 @@ const Nav = () => {
                                             aria-labelledby="w-dropdown-toggle-0">
                                             <div className="nav_dropdown-wrap" style={{height: '0px'}}>
                                                 <div className="nav_dropdown-content">
-                                                    <div className="nav_dropdown-column"><a href="/home/home-v1"
-                                                            aria-current="page"
-                                                            className="nav_dropdown-link hide-mobile-landscape w-dropdown-link w--current"
-                                                            tabIndex={0}>Home V.1</a><a href="/home/home-v2"
-                                                            className="nav_dropdown-link w-dropdown-link" tabIndex={0}>Home
-                                                            V.2</a><a href="/home/home-v3"
-                                                            className="nav_dropdown-link w-dropdown-link" tabIndex={0}>Home
-                                                            V.3</a><a href="/features"
+                                                    <div className="nav_dropdown-column"><a href="/features"
                                                             className="nav_dropdown-link w-dropdown-link"
-                                                            tabIndex={0}>Features</a></div>
-                                                    <div className="nav_dropdown-column"><a href="/about/about-us-v-1"
-                                                            className="nav_dropdown-link hide-mobile-landscape w-dropdown-link"
-                                                            tabIndex={0}>About Us V.1</a><a href="/about/about-us-v-2"
-                                                            className="nav_dropdown-link w-dropdown-link" tabIndex={0}>About
-                                                            Us &nbsp;V.2</a><a href="/about/about-us-v-3"
-                                                            className="nav_dropdown-link w-dropdown-link" tabIndex={0}>About
-                                                            Us &nbsp;V.3</a><a href="/pricing"
+                                                            tabIndex={0}>Features</a><a href="/pricing"
                                                             className="nav_dropdown-link w-dropdown-link"
                                                             tabIndex={0}>Pricing</a></div>
-                                                    <div className="nav_dropdown-column"><a href="/contact/contact-us-v-1"
-                                                            className="nav_dropdown-link hide-mobile-landscape w-dropdown-link"
-                                                            tabIndex={0}>Contact Us V.1</a><a
-                                                            href="/contact/contact-us-v-2"
-                                                            className="nav_dropdown-link w-dropdown-link"
-                                                            tabIndex={0}>Contact Us &nbsp;V.2</a><a
-                                                            href="/contact/contact-us-v-3"
-                                                            className="nav_dropdown-link w-dropdown-link"
-                                                            tabIndex={0}>Contact Us V.3</a></div>
-                                                    <div className="nav_dropdown-column"><a href="/blog"
-                                                            className="nav_dropdown-link w-dropdown-link"
-                                                            tabIndex={0}>Blog</a><a
-                                                            href="https://lumora-template.webflow.io/blogs/maximizing-your-marketing-roi"
-                                                            className="nav_dropdown-link w-dropdown-link" tabIndex={0}>Blog
-                                                            Post</a></div>
                                                 </div>
                                             </div>
                                         </nav>
