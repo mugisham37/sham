@@ -1,5 +1,6 @@
-import { useState } from 'react';
 'use client';
+
+import { useState } from 'react';
 
 import { motion } from 'framer-motion';
 import CircleArrowButton from '../CircleArrowButton';

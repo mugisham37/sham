@@ -1,5 +1,6 @@
-import { useState } from 'react';
 'use client';
+
+import { useState } from 'react';
 
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './FAQCard.module.css';
