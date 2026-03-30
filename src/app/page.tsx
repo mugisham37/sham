@@ -7,7 +7,7 @@ import ProjectCard from '../../components/ProjectCard';
 import Testimonials from '../../components/Testimonials';
 import FAQCard from '../../components/FAQCard';
 import { services, projects, faqs } from '../../data/content';
-import styles from './Home.module.css';
+
 
 export default function Home() {
   return (
@@ -15,31 +15,31 @@ export default function Home() {
       <Navigation />
 
       {/* HERO SECTION */}
-      <section id="hero-section" className={styles.hero}>
-        <div className={styles.container}>
-          <HeroReveal className={styles.heroContent} style={{ gap: 120 }}>
-            <HeroItem className={styles.labelTitle}>
-              <div className={styles.brandLabel}>
+      <section id="hero-section" className="hero">
+        <div className="container">
+          <HeroReveal className="heroContent" style={{ gap: 120 }}>
+            <HeroItem className="labelTitle">
+              <div className="brandLabel">
                 <span className="body-16-labels">Brand</span>
                 <span className="body-16-labels">Human</span>
               </div>
-              <h1 className={styles.heroTitle}>
+              <h1 className="heroTitle">
                 Break Out<br />The Square Space
               </h1>
             </HeroItem>
-            <HeroItem className={styles.ctaDesc}>
-              <div className={styles.ctaLeft}>
+            <HeroItem className="ctaDesc">
+              <div className="ctaLeft">
                 <ArrowButton text="Let's talk" link="/contact-us#hero-section" size="lg" />
-                <div className={styles.textAvatars}>
+                <div className="textAvatars">
                   <span className="body-16">You'll be talking with our creative members</span>
-                  <div className={styles.avatarStack}>
+                  <div className="avatarStack">
                     {[
                       'https://framerusercontent.com/images/iBEokrSJotCkBeSmhm1BmAu4NA8.png',
                       'https://framerusercontent.com/images/iQxUJrF0Jwb9FacL4hVpXOesibI.png',
                       'https://framerusercontent.com/images/sh9tE8rbkd9SFv2k6LYMRQAVwyc.png',
                       'https://framerusercontent.com/images/9f0KLdtiET6iTZwnwkTN4JFwVbY.png',
                     ].map((src, i) => (
-                      <img key={i} src={src} alt="" className={styles.avatar} style={{ marginLeft: i > 0 ? -16 : 0, zIndex: 4 - i }} />
+                      <img key={i} src={src} alt="" className="avatar" style={{ marginLeft: i > 0 ? -16 : 0, zIndex: 4 - i }} />
                     ))}
                   </div>
                 </div>
@@ -53,9 +53,9 @@ export default function Home() {
       </section>
 
       {/* ABOUT SECTION */}
-      <section id="about-us" className={styles.section}>
-        <SectionReveal className={styles.container}>
-          <div className={styles.aboutContent}>
+      <section id="about-us" className="section">
+        <SectionReveal className="container">
+          <div className="aboutContent">
             <h2 className="h2">We craft brands that<br />speak clearly</h2>
             <p className="body-20" style={{ maxWidth: 500 }}>
               We're a creative studio specializing in brand identity and art direction. Our team brings clarity, character, and confidence to every brand we work with — from strategy to final deliverables.
@@ -65,8 +65,8 @@ export default function Home() {
       </section>
 
       {/* SERVICES SECTION */}
-      <section id="services" className={styles.section}>
-        <div className={styles.container}>
+      <section id="services" className="section">
+        <div className="container">
           <SectionReveal><h2 className="h2" style={{ marginBottom: 40 }}>Services</h2></SectionReveal>
           <StaggerContainer>
             {services.map(s => (
@@ -77,10 +77,10 @@ export default function Home() {
       </section>
 
       {/* WORK SECTION */}
-      <section className={styles.section}>
-        <div className={styles.container}>
+      <section className="section">
+        <div className="container">
           <SectionReveal><h2 className="h2" style={{ marginBottom: 40 }}>Selected Work</h2></SectionReveal>
-          <StaggerContainer className={styles.projectGrid}>
+          <StaggerContainer className="projectGrid">
             {projects.slice(0, 6).map(p => (
               <StaggerItem key={p.slug}>
                 <ProjectCard name={p.name} description={p.description} slug={p.slug} />
@@ -91,14 +91,14 @@ export default function Home() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className={styles.section}>
+      <section className="section">
         <SectionReveal><Testimonials /></SectionReveal>
       </section>
 
       {/* PRICING */}
-      <section id="pricing" className={styles.section}>
-        <div className={styles.container}>
-          <SectionReveal className={styles.pricingContent}>
+      <section id="pricing" className="section">
+        <div className="container">
+          <SectionReveal className="pricingContent">
             <h2 className="h2">Simple, transparent pricing</h2>
             <p className="body-20" style={{ maxWidth: 500, marginTop: 20 }}>
               Choose a plan that works for your needs. No hidden fees, no long-term contracts. Just great design, delivered consistently.
@@ -108,11 +108,11 @@ export default function Home() {
       </section>
 
       {/* FAQS */}
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <div className={styles.faqLayout}>
+      <section className="section">
+        <div className="container">
+          <div className="faqLayout">
             <SectionReveal><h2 className="h2" style={{ maxWidth: 420 }}>Have Questions?</h2></SectionReveal>
-            <StaggerContainer className={styles.faqList}>
+            <StaggerContainer className="faqList">
               {faqs.map((f, i) => (
                 <StaggerItem key={i}><FAQCard question={f.question} answer={f.answer} /></StaggerItem>
               ))}

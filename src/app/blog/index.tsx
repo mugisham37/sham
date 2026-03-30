@@ -6,7 +6,7 @@ import Footer from '../../components/Footer';
 import BlogCard from '../../components/BlogCard';
 import { SearchIcon } from '../../components/Icons';
 import { blogPosts } from '../../data/content';
-import layout from '../../styles/layout.module.css';
+
 
 export default function Blog() {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -48,7 +48,7 @@ export default function Blog() {
                 )}
               </motion.div>
             </div>
-            <StaggerContainer className={layout.blogGrid}>
+            <StaggerContainer className="blogGrid"}>
               {filtered.map(p => (
                 <StaggerItem key={p.slug}><BlogCard title={p.title} slug={p.slug} date={p.date} excerpt={p.excerpt} /></StaggerItem>
               ))}

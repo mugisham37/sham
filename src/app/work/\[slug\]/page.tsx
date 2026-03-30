@@ -6,7 +6,7 @@ import Footer from '../../../components/Footer';
 import ArrowButton from '../../../components/ArrowButton';
 import ProjectCard from '../../../components/ProjectCard';
 import { projects } from '../../../data/content';
-import layout from '../../../app/layout.module.css';
+
 import styles from '../WorkDetail/WorkDetail.module.css';
 import { useParams } from 'next/navigation';
 
@@ -63,7 +63,7 @@ export default function WorkDetailPage() {
       <section style={{ padding: '0 20px 140px', maxWidth: 1280, margin: '0 auto' }}>
         <div style={{ maxWidth: 1080, margin: '0 auto' }}>
           <SectionReveal><h2 className="h2b" style={{ marginBottom: 40 }}>More Projects</h2></SectionReveal>
-          <StaggerContainer className={layout.projectGrid}>
+          <StaggerContainer className="projectGrid"}>
             {otherProjects.map(p => (
               <StaggerItem key={p.slug}><ProjectCard name={p.name} description={p.description} slug={p.slug} /></StaggerItem>
             ))}

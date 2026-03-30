@@ -6,7 +6,7 @@ import Footer from '../../../components/Footer';
 import BlogCard from '../../../components/BlogCard';
 import { blogPosts } from '../../../data/content';
 import styles from '../BlogPost/BlogPost.module.css';
-import layout from '../../../app/layout.module.css';
+
 import { useParams } from 'next/navigation';
 
 export default function BlogPostPage() {
@@ -48,7 +48,7 @@ export default function BlogPostPage() {
       <section style={{ padding: '0 20px 140px', maxWidth: 1280, margin: '0 auto' }}>
         <div style={{ maxWidth: 1080, margin: '0 auto' }}>
           <SectionReveal><h2 className="h2b" style={{ marginBottom: 40 }}>More Articles</h2></SectionReveal>
-          <StaggerContainer className={layout.blogGrid}>
+          <StaggerContainer className="blogGrid"}>
             {morePosts.map(p => (
               <StaggerItem key={p.slug}><BlogCard title={p.title} slug={p.slug} date={p.date} excerpt={p.excerpt} /></StaggerItem>
             ))}

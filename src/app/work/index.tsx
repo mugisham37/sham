@@ -3,14 +3,14 @@ import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import ProjectCard from '../../components/ProjectCard';
 import { projects } from '../../data/content';
-import layout from '../../styles/layout.module.css';
+
 
 export default function Work() {
   return (
     <PageWrapper>
       <Navigation />
-      <section id="hero-section" className={layout.heroSection}>
-        <div className={layout.innerContainer}>
+      <section id="hero-section" className="heroSection"}>
+        <div className="innerContainer"}>
           <HeroReveal style={{ display: 'flex', flexDirection: 'column', gap: 60 }}>
             <HeroItem>
               <h1 className="h1b" style={{ maxWidth: 942 }}>A selection of our creative work</h1>
@@ -21,7 +21,7 @@ export default function Work() {
               </p>
             </HeroItem>
           </HeroReveal>
-          <StaggerContainer className={layout.projectGrid} style={{ marginTop: 60 }}>
+          <StaggerContainer className="projectGrid"} style={{ marginTop: 60 }}>
             {projects.map(p => (
               <StaggerItem key={p.slug}><ProjectCard name={p.name} description={p.description} slug={p.slug} /></StaggerItem>
             ))}
