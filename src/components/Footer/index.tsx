@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import CTAText from '../CTAText';
 import SocialMediaIcon from '../SocialMediaIcon';
 import { socialLinks } from '../../data/content';
@@ -8,7 +8,7 @@ import styles from './Footer.module.css';
 const linkRows = [
   [{ label: 'Home', href: '/' }, { label: 'About Us', href: '/#about-us' }, { label: 'Services', href: '/#services' }],
   [{ label: 'Work', href: '/work' }, { label: 'Pricing', href: '/#pricing' }, { label: 'Blog', href: '/blog' }],
-  [{ label: 'Terms & Conditions', href: '/terms-conditions' }, { label: 'Privacy Policy', href: '/refund-policy' }],
+  [{ label: 'Terms & Conditions', href: '/legal/terms' }, { label: 'Privacy Policy', href: '/legal/privacy' }, { label: 'Refund Policy', href: '/legal/refund' }],
 ];
 
 export default function Footer() {
@@ -28,7 +28,7 @@ export default function Footer() {
                 <div key={i} className={styles.linkRow}>
                   {row.map((link, j) => (
                     <span key={link.label} style={{ display: 'contents' }}>
-                      <Link to={link.href} className={`body-20 ${styles.link}`}>{link.label}</Link>
+                      <Link href={link.href} className={`body-20 ${styles.link}`}>{link.label}</Link>
                       {j < row.length - 1 && <span className="body-20" style={{ color: 'var(--white)' }}>/</span>}
                     </span>
                   ))}

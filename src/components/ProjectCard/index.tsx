@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import styles from './ProjectCard.module.css';
 
 interface ProjectCardProps { name: string; description: string; slug: string; image?: string; }
@@ -8,7 +8,7 @@ interface ProjectCardProps { name: string; description: string; slug: string; im
 export default function ProjectCard({ name, description, slug, image }: ProjectCardProps) {
   const [hovered, setHovered] = useState(false);
   return (
-    <Link to={`/work/${slug}#work-section`} className={styles.card} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+    <Link href={`/work/${slug}#work-section`} className={styles.card} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
       <div className={styles.imageWrap}>
         <motion.div className={styles.imageBg} style={{ backgroundImage: image ? `url(${image})` : undefined, backgroundColor: image ? undefined : 'var(--black-03)' }}
           animate={{ scale: hovered ? 1.05 : 1 }} transition={{ duration: 0.5, ease: 'easeOut' }} />

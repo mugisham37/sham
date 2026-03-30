@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 interface ArrowButtonProps {
   text: string;
@@ -46,5 +46,5 @@ export default function ArrowButton({ text, link, size = 'lg', color = 'var(--bl
   if (link.startsWith('http') || link.startsWith('mailto') || link.startsWith('tel') || openInNewTab) {
     return <a href={link} target={openInNewTab ? '_blank' : undefined} rel={openInNewTab ? 'noopener noreferrer' : undefined}>{content}</a>;
   }
-  return <Link to={link}>{content}</Link>;
+  return <Link href={link}>{content}</Link>;
 }

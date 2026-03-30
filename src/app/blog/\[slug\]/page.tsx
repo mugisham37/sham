@@ -1,13 +1,15 @@
-import { useParams } from 'react-router-dom';
-import { PageWrapper, SectionReveal, HeroReveal, HeroItem, StaggerContainer, StaggerItem } from '../../components/Animations';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-import BlogCard from '../../components/BlogCard';
-import { blogPosts } from '../../data/content';
-import styles from './BlogPost.module.css';
-import layout from '../../styles/layout.module.css';
+'use client';
 
-export default function BlogPost() {
+import { PageWrapper, SectionReveal, HeroReveal, HeroItem, StaggerContainer, StaggerItem } from '../../../components/Animations';
+import Navigation from '../../../components/Navigation';
+import Footer from '../../../components/Footer';
+import BlogCard from '../../../components/BlogCard';
+import { blogPosts } from '../../../data/content';
+import styles from '../BlogPost/BlogPost.module.css';
+import layout from '../../../app/layout.module.css';
+import { useParams } from 'next/navigation';
+
+export default function BlogPostPage() {
   const { slug } = useParams();
   const post = blogPosts.find(p => p.slug === slug) || blogPosts[0];
   const morePosts = blogPosts.filter(p => p.slug !== slug).slice(0, 3);

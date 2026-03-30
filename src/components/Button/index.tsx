@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 interface ButtonProps { text: string; link: string; openInNewTab?: boolean; }
 
@@ -23,5 +23,5 @@ export default function Button({ text, link, openInNewTab = false }: ButtonProps
   );
 
   if (openInNewTab || link.startsWith('http')) return <a href={link} target="_blank" rel="noopener noreferrer">{inner}</a>;
-  return <Link to={link}>{inner}</Link>;
+  return <Link href={link}>{inner}</Link>;
 }

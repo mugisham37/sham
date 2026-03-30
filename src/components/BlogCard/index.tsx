@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import styles from './BlogCard.module.css';
 
 interface BlogCardProps { title: string; slug: string; date: string; excerpt: string; image?: string; featured?: boolean; }
@@ -8,7 +8,7 @@ interface BlogCardProps { title: string; slug: string; date: string; excerpt: st
 export default function BlogCard({ title, slug, date, excerpt, image, featured = false }: BlogCardProps) {
   const [hovered, setHovered] = useState(false);
   return (
-    <Link to={`/blog/${slug}#article-section`} className={featured ? styles.featured : styles.card}
+    <Link href={`/blog/${slug}#article-section`} className={featured ? styles.featured : styles.card}
       onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
       <motion.div className={styles.imageBg}
         style={{ backgroundImage: image ? `url(${image})` : undefined, backgroundColor: image ? undefined : `hsl(${title.length * 30}, 25%, 35%)` }}

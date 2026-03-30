@@ -1,6 +1,9 @@
+'use client';
+
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { LogoSVG } from '../Icons';
 import styles from './Navigation.module.css';
 
@@ -15,17 +18,30 @@ const navLinks = [
 
 function NavLink({ label, href, onClick }: { label: string; href: string; onClick: () => void }) {
   const [hovered, setHovered] = useState(false);
-  const navigate = useNavigate();
+  const pathname = usePathname();
   const arrow = <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="var(--white)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>;
 
+  // Handle navigation with hash support
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
     onClick();
+    
     const [path, hash] = href.split('#');
-    if (path && path !== window.location.pathname) {
-      navigate(path);
-      if (hash) setTimeout(() => document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth' }), 300);
+    const targetPath = path || '/';
+    
+    // If navigating to a different page, use Next.js Link
+    if (path && targetPath !== pathname) {
+      // Next.js Link will handle the navigation, hash scroll happens after load
+      const linkElement = document.createElement('a');
+      linkElement.href = href;
+      linkElement.click();
+      
+      // If there's a hash, store it in sessionStorage for the target page to handle
+      if (hash) {
+        sessionStorage.setItem('scrollToHash', hash);
+      }
     } else if (hash) {
+      // Same page, just scroll to hash
       document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth' });
     }
   };
@@ -41,11 +57,11 @@ function NavLink({ label, href, onClick }: { label: string; href: string; onClic
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown on route change
-  useEffect(() => { setIsOpen(false); }, [location.pathname]);
+  useEffect(() => { setIsOpen(false); }, [pathname]);
 
   // Close on outside click
   useEffect(() => {
@@ -57,10 +73,21 @@ export default function Navigation() {
     return () => document.removeEventListener('mousedown', handler);
   }, [isOpen]);
 
+  // Handle hash scroll on page load
+  useEffect(() => {
+    const hash = sessionStorage.getItem('scrollToHash');
+    if (hash) {
+      setTimeout(() => {
+        document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth' });
+        sessionStorage.removeItem('scrollToHash');
+      }, 300);
+    }
+  }, [pathname]);
+
   return (
     <nav className={styles.nav}>
       <div className={styles.inner}>
-        <Link to="/" className={styles.logo} onClick={() => setIsOpen(false)}>
+        <Link href="/" className={styles.logo} onClick={() => setIsOpen(false)}>
           <LogoSVG />
           <span className="body-18-medium">Sham Studio</span>
         </Link>

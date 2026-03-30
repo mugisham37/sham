@@ -1,14 +1,16 @@
-import { useParams } from 'react-router-dom';
-import { PageWrapper, SectionReveal, HeroReveal, HeroItem, StaggerContainer, StaggerItem } from '../../components/Animations';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-import ArrowButton from '../../components/ArrowButton';
-import ProjectCard from '../../components/ProjectCard';
-import { projects } from '../../data/content';
-import layout from '../../styles/layout.module.css';
-import styles from './WorkDetail.module.css';
+'use client';
 
-export default function WorkDetail() {
+import { PageWrapper, SectionReveal, HeroReveal, HeroItem, StaggerContainer, StaggerItem } from '../../../components/Animations';
+import Navigation from '../../../components/Navigation';
+import Footer from '../../../components/Footer';
+import ArrowButton from '../../../components/ArrowButton';
+import ProjectCard from '../../../components/ProjectCard';
+import { projects } from '../../../data/content';
+import layout from '../../../app/layout.module.css';
+import styles from '../WorkDetail/WorkDetail.module.css';
+import { useParams } from 'next/navigation';
+
+export default function WorkDetailPage() {
   const { slug } = useParams();
   const project = projects.find(p => p.slug === slug) || projects[0];
   const otherProjects = projects.filter(p => p.slug !== slug).slice(0, 3);
