@@ -48,7 +48,7 @@ export default function BlogPostPage() {
       <section style={{ padding: '0 20px 140px', maxWidth: 1280, margin: '0 auto' }}>
         <div style={{ maxWidth: 1080, margin: '0 auto' }}>
           <SectionReveal><h2 className="h2b" style={{ marginBottom: 40 }}>More Articles</h2></SectionReveal>
-          <StaggerContainer className="blogGrid"}>
+          <StaggerContainer className="blogGrid">
             {morePosts.map(p => (
               <StaggerItem key={p.slug}><BlogCard title={p.title} slug={p.slug} date={p.date} excerpt={p.excerpt} /></StaggerItem>
             ))}

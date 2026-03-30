@@ -9,8 +9,8 @@ export default function Work() {
   return (
     <PageWrapper>
       <Navigation />
-      <section id="hero-section" className="heroSection"}>
-        <div className="innerContainer"}>
+      <section id="hero-section" className="heroSection">
+        <div className="innerContainer">
           <HeroReveal style={{ display: 'flex', flexDirection: 'column', gap: 60 }}>
             <HeroItem>
               <h1 className="h1b" style={{ maxWidth: 942 }}>A selection of our creative work</h1>
@@ -21,7 +21,7 @@ export default function Work() {
               </p>
             </HeroItem>
           </HeroReveal>
-          <StaggerContainer className="projectGrid"} style={{ marginTop: 60 }}>
+          <StaggerContainer className="projectGrid" style={{ marginTop: 60 }}>
             {projects.map(p => (
               <StaggerItem key={p.slug}><ProjectCard name={p.name} description={p.description} slug={p.slug} /></StaggerItem>
             ))}

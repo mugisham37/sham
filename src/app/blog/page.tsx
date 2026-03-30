@@ -48,7 +48,7 @@ export default function Blog() {
                 )}
               </motion.div>
             </div>
-            <StaggerContainer className="blogGrid"}>
+            <StaggerContainer className="blogGrid">
               {filtered.map(p => (
                 <StaggerItem key={p.slug}><BlogCard title={p.title} slug={p.slug} date={p.date} excerpt={p.excerpt} /></StaggerItem>
               ))}

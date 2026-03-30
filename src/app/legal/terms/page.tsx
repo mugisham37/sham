@@ -1,4 +1,4 @@
-import LegalPage from '../../legal/LegalPage';
+import LegalPage from '../page';
 import { legalContent } from '../../../data/content';
 
 export default function TermsPage() {
