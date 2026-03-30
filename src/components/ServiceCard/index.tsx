@@ -1,4 +1,6 @@
 import { useState } from 'react';
+'use client';
+
 import { motion } from 'framer-motion';
 import CircleArrowButton from '../CircleArrowButton';
 import styles from './ServiceCard.module.css';

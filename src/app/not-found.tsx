@@ -11,7 +11,7 @@ export default function NotFound() {
         alignItems: 'center', justifyContent: 'center', gap: 20, padding: '0 20px',
       }}>
         <h1 className="h1" style={{ textAlign: 'center' }}>Oops!</h1>
-        <p className="body-16" style={{ textAlign: 'center' }}>We couldn't find the page you were looking for</p>
+        <p className="body-16" style={{ textAlign: 'center' }}>We couldn&apos;t find the page you were looking for</p>
         <div style={{ marginTop: 20 }}>
           <Button text="Go Back" link="/" />
         </div>

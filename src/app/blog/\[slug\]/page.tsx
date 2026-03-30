@@ -7,10 +7,8 @@ import BlogCard from '../../../components/BlogCard';
 import { blogPosts } from '../../../data/content';
 import styles from '../BlogPost/BlogPost.module.css';
 
-import { useParams } from 'next/navigation';
-
-export default function BlogPostPage() {
-  const { slug } = useParams();
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
+  const { slug } = params;
   const post = blogPosts.find(p => p.slug === slug) || blogPosts[0];
   const morePosts = blogPosts.filter(p => p.slug !== slug).slice(0, 3);
 
@@ -49,7 +47,7 @@ export default function BlogPostPage() {
         <div style={{ maxWidth: 1080, margin: '0 auto' }}>
           <SectionReveal><h2 className="h2b" style={{ marginBottom: 40 }}>More Articles</h2></SectionReveal>
           <StaggerContainer className="blogGrid">
-            {morePosts.map(p => (
+            {morePosts.map((p: typeof blogPosts[0]) => (
               <StaggerItem key={p.slug}><BlogCard title={p.title} slug={p.slug} date={p.date} excerpt={p.excerpt} /></StaggerItem>
             ))}
           </StaggerContainer>

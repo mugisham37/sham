@@ -1,3 +1,5 @@
+'use client';
+
 import { PageWrapper, StaggerContainer, StaggerItem, HeroReveal, HeroItem } from '../../components/Animations';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -17,7 +19,7 @@ export default function Work() {
             </HeroItem>
             <HeroItem>
               <p className="body-20" style={{ maxWidth: 942 }}>
-                Explore the identities, visuals, and direction we've crafted for clients across different industries. Every project reflects our focus on detail, storytelling, and meaningful brand expression.
+                Explore the identities, visuals, and direction we&apos;ve crafted for clients across different industries. Every project reflects our focus on detail, storytelling, and meaningful brand expression.
               </p>
             </HeroItem>
           </HeroReveal>

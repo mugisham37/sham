@@ -1,4 +1,6 @@
 import { useState } from 'react';
+'use client';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './FAQCard.module.css';
 

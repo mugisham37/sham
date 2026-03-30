@@ -1,0 +1,23 @@
+/* Work Detail Styles */
+
+.detailHero {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.imagePair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .detailHero {
+    gap: 24px;
+  }
+
+  .imagePair {
+    grid-template-columns: 1fr;
+  }
+}

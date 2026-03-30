@@ -1,4 +1,6 @@
 import { useState } from 'react';
+'use client';
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import styles from './ProjectCard.module.css';

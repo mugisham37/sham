@@ -6,6 +6,7 @@ import ServiceCard from '../../components/ServiceCard';
 import ProjectCard from '../../components/ProjectCard';
 import Testimonials from '../../components/Testimonials';
 import FAQCard from '../../components/FAQCard';
+import Image from 'next/image';
 import { services, projects, faqs } from '../../data/content';
 
 
@@ -29,17 +30,17 @@ export default function Home() {
             </HeroItem>
             <HeroItem className="ctaDesc">
               <div className="ctaLeft">
-                <ArrowButton text="Let's talk" link="/contact-us#hero-section" size="lg" />
+                <ArrowButton text="Let&apos;s talk" link="/contact-us#hero-section" size="lg" />
                 <div className="textAvatars">
-                  <span className="body-16">You'll be talking with our creative members</span>
+                  <span className="body-16">You&apos;ll be talking with our creative members</span>
                   <div className="avatarStack">
                     {[
                       'https://framerusercontent.com/images/iBEokrSJotCkBeSmhm1BmAu4NA8.png',
                       'https://framerusercontent.com/images/iQxUJrF0Jwb9FacL4hVpXOesibI.png',
                       'https://framerusercontent.com/images/sh9tE8rbkd9SFv2k6LYMRQAVwyc.png',
                       'https://framerusercontent.com/images/9f0KLdtiET6iTZwnwkTN4JFwVbY.png',
-                    ].map((src, i) => (
-                      <img key={i} src={src} alt="" className="avatar" style={{ marginLeft: i > 0 ? -16 : 0, zIndex: 4 - i }} />
+                    ].map((src: string, i: number) => (
+                      <Image key={i} src={src} alt="Team member" width={40} height={40} className="avatar" style={{ marginLeft: i > 0 ? -16 : 0, zIndex: 4 - i }} />
                     ))}
                   </div>
                 </div>
@@ -58,7 +59,7 @@ export default function Home() {
           <div className="aboutContent">
             <h2 className="h2">We craft brands that<br />speak clearly</h2>
             <p className="body-20" style={{ maxWidth: 500 }}>
-              We're a creative studio specializing in brand identity and art direction. Our team brings clarity, character, and confidence to every brand we work with — from strategy to final deliverables.
+              We&apos;re a creative studio specializing in brand identity and art direction. Our team brings clarity, character, and confidence to every brand we work with — from strategy to final deliverables.
             </p>
           </div>
         </SectionReveal>
@@ -69,7 +70,7 @@ export default function Home() {
         <div className="container">
           <SectionReveal><h2 className="h2" style={{ marginBottom: 40 }}>Services</h2></SectionReveal>
           <StaggerContainer>
-            {services.map(s => (
+            {services.map((s: typeof services[0]) => (
               <StaggerItem key={s.title}><ServiceCard title={s.title} labels={s.labels} /></StaggerItem>
             ))}
           </StaggerContainer>
@@ -81,7 +82,7 @@ export default function Home() {
         <div className="container">
           <SectionReveal><h2 className="h2" style={{ marginBottom: 40 }}>Selected Work</h2></SectionReveal>
           <StaggerContainer className="projectGrid">
-            {projects.slice(0, 6).map(p => (
+            {projects.slice(0, 6).map((p: typeof projects[0]) => (
               <StaggerItem key={p.slug}>
                 <ProjectCard name={p.name} description={p.description} slug={p.slug} />
               </StaggerItem>
@@ -113,7 +114,7 @@ export default function Home() {
           <div className="faqLayout">
             <SectionReveal><h2 className="h2" style={{ maxWidth: 420 }}>Have Questions?</h2></SectionReveal>
             <StaggerContainer className="faqList">
-              {faqs.map((f, i) => (
+              {faqs.map((f: typeof faqs[0], i: number) => (
                 <StaggerItem key={i}><FAQCard question={f.question} answer={f.answer} /></StaggerItem>
               ))}
             </StaggerContainer>

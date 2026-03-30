@@ -1,6 +1,6 @@
-import { PageWrapper, SectionReveal } from '../components/Animations';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { PageWrapper, SectionReveal } from '../../components/Animations';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
 
 interface LegalPageProps { title: string; content: string; }
 

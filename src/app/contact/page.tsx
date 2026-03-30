@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { PageWrapper, SectionReveal, HeroReveal, HeroItem, StaggerContainer, StaggerItem } from '../../components/Animations';
 import Navigation from '../../components/Navigation';
@@ -23,8 +25,8 @@ export default function ContactUs() {
         <div style={{ maxWidth: 1080, margin: '0 auto' }}>
           <HeroReveal className={styles.heroLayout}>
             <HeroItem className={styles.left}>
-              <h1 className="h1b" style={{ maxWidth: 942 }}>Let's Work Together.</h1>
-              <p className="body-20">Have a project or need help? Fill out the form, and we'll get back to you soon.</p>
+              <h1 className="h1b" style={{ maxWidth: 942 }}>Let&apos;s Work Together.</h1>
+              <p className="body-20">Have a project or need help? Fill out the form, and we&apos;ll get back to you soon.</p>
             </HeroItem>
             <HeroItem>
               <form className={styles.form} onSubmit={handleSubmit}>

@@ -8,10 +8,9 @@ import ProjectCard from '../../../components/ProjectCard';
 import { projects } from '../../../data/content';
 
 import styles from '../WorkDetail/WorkDetail.module.css';
-import { useParams } from 'next/navigation';
 
-export default function WorkDetailPage() {
-  const { slug } = useParams();
+export default function WorkDetailPage({ params }: { params: { slug: string } }) {
+  const { slug } = params;
   const project = projects.find(p => p.slug === slug) || projects[0];
   const otherProjects = projects.filter(p => p.slug !== slug).slice(0, 3);
 
@@ -64,7 +63,7 @@ export default function WorkDetailPage() {
         <div style={{ maxWidth: 1080, margin: '0 auto' }}>
           <SectionReveal><h2 className="h2b" style={{ marginBottom: 40 }}>More Projects</h2></SectionReveal>
           <StaggerContainer className="projectGrid">
-            {otherProjects.map(p => (
+            {otherProjects.map((p: typeof projects[0]) => (
               <StaggerItem key={p.slug}><ProjectCard name={p.name} description={p.description} slug={p.slug} /></StaggerItem>
             ))}
           </StaggerContainer>

@@ -1,4 +1,6 @@
 import { useState } from 'react';
+'use client';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import CircleArrowButton from '../CircleArrowButton';
 import { testimonials } from '../../data/content';
