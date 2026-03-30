@@ -7,7 +7,7 @@ import ArrowButton from '../../../components/ArrowButton';
 import ProjectCard from '../../../components/ProjectCard';
 import { projects } from '../../../data/content';
 
-import styles from '../WorkDetail/WorkDetail.module.css';
+import styles from '../WorkDetail.module.css';
 
 export default function WorkDetailPage({ params }: { params: { slug: string } }) {
   const { slug } = params;

@@ -1,6 +1,6 @@
-import { PageWrapper } from '../../components/Animations';
-import Navigation from '../../components/Navigation';
-import Button from '../../components/Button';
+import { PageWrapper } from '@/components/Animations';
+import Navigation from '@/components/Navigation';
+import Button from '@/components/Button';
 
 export default function NotFound() {
   return (

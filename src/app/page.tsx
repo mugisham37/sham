@@ -1,13 +1,13 @@
-import { PageWrapper, SectionReveal, HeroReveal, HeroItem, StaggerContainer, StaggerItem } from '../../components/Animations';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-import ArrowButton from '../../components/ArrowButton';
-import ServiceCard from '../../components/ServiceCard';
-import ProjectCard from '../../components/ProjectCard';
-import Testimonials from '../../components/Testimonials';
-import FAQCard from '../../components/FAQCard';
+import { PageWrapper, SectionReveal, HeroReveal, HeroItem, StaggerContainer, StaggerItem } from '@/components/Animations';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
+import ArrowButton from '@/components/ArrowButton';
+import ServiceCard from '@/components/ServiceCard';
+import ProjectCard from '@/components/ProjectCard';
+import Testimonials from '@/components/Testimonials';
+import FAQCard from '@/components/FAQCard';
 import Image from 'next/image';
-import { services, projects, faqs } from '../../data/content';
+import { services, projects, faqs } from '@/data/content';
 
 
 export default function Home() {

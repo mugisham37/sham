@@ -61,7 +61,10 @@ export default function Navigation() {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown on route change
-  useEffect(() => { setIsOpen(false); }, [pathname]);
+  // When route changes, close the dropdown menu - this is an intentional effect
+  useEffect(() => { 
+    setIsOpen(false); // eslint-disable-line react-hooks/set-state-in-effect
+  }, [pathname]);
 
   // Close on outside click
   useEffect(() => {

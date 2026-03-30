@@ -1,16 +1,16 @@
 'use client';
 
-import { PageWrapper, SectionReveal, HeroReveal, HeroItem, StaggerContainer, StaggerItem } from '../../../components/Animations';
-import Navigation from '../../../components/Navigation';
-import Footer from '../../../components/Footer';
-import BlogCard from '../../../components/BlogCard';
-import { blogPosts } from '../../../data/content';
-import styles from '../BlogPost/BlogPost.module.css';
+import { PageWrapper, SectionReveal, HeroReveal, HeroItem, StaggerContainer, StaggerItem } from '@/components/Animations';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
+import BlogCard from '@/components/BlogCard';
+import { blogPosts } from '@/data/content';
+import styles from '@/app/blog/BlogPost.module.css';
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const { slug } = params;
-  const post = blogPosts.find(p => p.slug === slug) || blogPosts[0];
-  const morePosts = blogPosts.filter(p => p.slug !== slug).slice(0, 3);
+  const post = blogPosts.find((p: typeof blogPosts[0]) => p.slug === slug) || blogPosts[0];
+  const morePosts = blogPosts.filter((p: typeof blogPosts[0]) => p.slug !== slug).slice(0, 3);
 
   return (
     <PageWrapper>
