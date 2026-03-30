@@ -1,0 +1,82 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-grotesk@400;500;600&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&display=swap');
+
+:root {
+  --black-01: rgb(51, 51, 51);
+  --black-02: rgb(15, 15, 15);
+  --black-03: rgb(31, 31, 31);
+  --gray: rgb(153, 153, 153);
+  --dark-gray: rgb(76, 76, 76);
+  --white: rgb(255, 255, 255);
+  --black-02-80: rgba(15, 15, 15, 0.8);
+  --black-02-60: rgba(15, 15, 15, 0.6);
+  --black-02-30: rgba(15, 15, 15, 0.3);
+  --black-02-20: rgba(15, 15, 15, 0.2);
+  --black-01-80: rgba(51, 51, 51, 0.8);
+  --white-30: rgba(255, 255, 255, 0.3);
+  --error-bg: rgba(255, 34, 68, 0.15);
+  --hover-gray: rgb(235, 235, 235);
+
+  --page-max-width: 1280px;
+  --container-max-width: 1080px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-pill: 160px;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { font-family: 'Clash Grotesk', sans-serif; color: var(--black-01); background: var(--white); overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+button { border: none; background: none; cursor: pointer; font-family: inherit; }
+ul, ol { list-style: none; }
+img { max-width: 100%; display: block; }
+input, textarea { font-family: inherit; border: none; outline: none; }
+
+/* Typography */
+.h1 { font: 500 94px/1em 'Clash Grotesk', sans-serif; letter-spacing: -0.02em; }
+.h1-italic { font: italic 110px/1em 'Instrument Serif', serif; letter-spacing: -0.02em; }
+.h1b { font: 500 82px/1em 'Clash Grotesk', sans-serif; letter-spacing: -0.02em; }
+.h2 { font: 500 80px/1.2em 'Clash Grotesk', sans-serif; letter-spacing: -0.02em; }
+.h2-italic { font: italic 80px/1.2em 'Instrument Serif', serif; letter-spacing: -0.02em; }
+.h2b { font: 500 48px/1.2em 'Clash Grotesk', sans-serif; letter-spacing: -0.02em; }
+.h3 { font: 400 62px/1.2em 'Clash Grotesk', sans-serif; letter-spacing: -0.02em; }
+.h3b { font: 500 34px/1.2em 'Clash Grotesk', sans-serif; letter-spacing: -0.02em; }
+.h4 { font: 500 30px/1.2em 'Clash Grotesk', sans-serif; letter-spacing: -0.02em; }
+.h5 { font: 500 28px/1.2em 'Clash Grotesk', sans-serif; letter-spacing: -0.02em; }
+.h6 { font: 500 26px/1.2em 'Clash Grotesk', sans-serif; letter-spacing: -0.02em; }
+.body-16-labels { font: 500 16px/1.2em 'Clash Grotesk', sans-serif; letter-spacing: -0.02em; }
+.body-16 { font: 400 16px/1.2em 'Clash Grotesk', sans-serif; letter-spacing: -0.02em; }
+.body-16-medium { font: 500 16px/1.2em 'Clash Grotesk', sans-serif; letter-spacing: -0.02em; }
+.body-18 { font: 400 18px/1.2em 'Clash Grotesk', sans-serif; letter-spacing: -0.02em; }
+.body-18-medium { font: 500 18px/1.2em 'Clash Grotesk', sans-serif; letter-spacing: -0.02em; }
+.body-20 { font: 400 20px/1.2em 'Clash Grotesk', sans-serif; letter-spacing: -0.02em; }
+.body-24 { font: 400 24px/1.2em 'Clash Grotesk', sans-serif; letter-spacing: -0.02em; }
+.body-24-medium { font: 500 24px/1.2em 'Clash Grotesk', sans-serif; letter-spacing: -0.02em; }
+.body-36 { font: 400 36px/1.2em 'Clash Grotesk', sans-serif; letter-spacing: -0.02em; }
+
+/* Layout Helpers */
+.container { width: 100%; max-width: var(--container-max-width); margin: 0 auto; }
+.page-section { width: 100%; max-width: var(--page-max-width); margin: 0 auto; padding: 160px 20px; }
+
+@media (max-width: 810px) {
+  .h1 { font-size: 60px; }
+  .h1b { font-size: 52px; }
+  .h2 { font-size: 52px; }
+  .h3 { font-size: 42px; }
+  .h2b { font-size: 36px; }
+  .body-36 { font-size: 28px; }
+}
+@media (max-width: 390px) {
+  .h1 { font-size: 40px; }
+  .h1b { font-size: 36px; }
+  .h2 { font-size: 36px; }
+  .h3 { font-size: 30px; }
+  .h2b { font-size: 28px; }
+  .h3b { font-size: 26px; }
+  .body-36 { font-size: 22px; }
+  .body-24, .body-24-medium { font-size: 20px; }
+}

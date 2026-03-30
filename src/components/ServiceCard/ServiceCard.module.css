@@ -1,0 +1,33 @@
+.card {
+  width: 100%; border-top: 1px solid var(--gray);
+  padding: 40px 0; display: flex; flex-direction: column; gap: 20px;
+  cursor: pointer;
+}
+.arrowRow { display: flex; justify-content: flex-end; }
+.labelsWrap {
+  position: relative; display: flex; align-items: center;
+  overflow: hidden; height: 0; opacity: 0;
+}
+.fadeLeft, .fadeRight {
+  position: absolute; width: 60px; height: 100%; z-index: 5; pointer-events: none;
+}
+.fadeLeft { left: 0; background: linear-gradient(to right, white, transparent); }
+.fadeRight { right: 0; background: linear-gradient(to left, white, transparent); }
+.ticker { overflow: hidden; flex: 1; }
+.tickerTrack {
+  display: flex; gap: 20px; width: max-content;
+  animation: tickerScroll 20s linear infinite;
+}
+.pill {
+  padding: 12px 24px; border-radius: 181px;
+  border: 1px solid var(--dark-gray); white-space: nowrap;
+  font: 400 16px/1.2em 'Clash Grotesk', sans-serif; letter-spacing: -0.02em;
+}
+@keyframes tickerScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 390px) {
+  .card h3 { font-size: 30px; }
+}

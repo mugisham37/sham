@@ -1,0 +1,23 @@
+.detailHero {
+  display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; flex-wrap: wrap;
+}
+.detailMeta {
+  display: flex; gap: 20px; align-items: flex-end; flex-wrap: wrap;
+}
+.metaItem {
+  display: flex; flex-direction: column; gap: 4px;
+}
+.imagePair {
+  display: flex; gap: 40px;
+}
+.imagePair > div {
+  flex: 1;
+}
+
+@media (max-width: 810px) {
+  .detailHero { flex-direction: column; align-items: flex-start; }
+  .imagePair { flex-direction: column; gap: 20px; }
+}
+@media (max-width: 390px) {
+  .detailMeta { gap: 12px; }
+}

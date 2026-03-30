@@ -1,0 +1,21 @@
+.section { width: 100%; max-width: 1080px; margin: 0 auto; display: flex; flex-direction: column; gap: 60px; }
+.header { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+.arrows { display: flex; gap: 10px; }
+.main { display: flex; align-items: flex-start; width: 100%; position: relative; }
+.counter { padding-right: 80px; padding-top: 7px; flex-shrink: 0; }
+.content { flex: 1; max-width: 780px; margin: 0 auto; }
+.testimonial { display: flex; flex-direction: column; gap: 40px; }
+.author { display: flex; align-items: center; gap: 10px; }
+.avatar { width: 64px; height: 64px; border-radius: 50%; flex-shrink: 0; background: var(--gray); }
+.nameRole { display: flex; flex-direction: column; gap: 4px; }
+
+@media (max-width: 810px) {
+  .main { flex-direction: column; gap: 30px; }
+  .counter { padding-right: 0; }
+  .header h2 { font-size: 52px; }
+}
+@media (max-width: 390px) {
+  .header { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .header h2 { font-size: 36px; }
+  .section { gap: 40px; }
+}

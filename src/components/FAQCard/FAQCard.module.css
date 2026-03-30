@@ -1,0 +1,11 @@
+.card {
+  background: var(--black-02); border-radius: 20px;
+  padding: 24px 60px 24px 24px; cursor: pointer;
+  position: relative;
+}
+.row { display: flex; align-items: center; gap: 24px; }
+.iconWrap {
+  position: absolute; top: 27px; right: 27px;
+  width: 25px; height: 25px; background: var(--white);
+  border-radius: 6px; display: flex; align-items: center; justify-content: center;
+}

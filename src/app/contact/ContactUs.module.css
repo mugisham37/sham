@@ -1,0 +1,44 @@
+.heroLayout { display: flex; gap: 60px; align-items: flex-start; }
+.left { display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.form {
+  width: 100%; max-width: 560px; background: var(--black-02);
+  border-radius: 20px; padding: 20px;
+  display: flex; flex-direction: column; gap: 20px;
+}
+.field { display: flex; flex-direction: column; gap: 8px; }
+.label { font: 500 16px/1.2em 'Satoshi', sans-serif; color: var(--white); }
+.input, .textarea {
+  width: 100%; padding: 14px 16px; border-radius: 10px;
+  background: var(--black-03); color: var(--white);
+  border: 1px solid var(--dark-gray);
+  font: 400 16px/1.2em 'Clash Grotesk', sans-serif;
+  transition: border-color 0.2s;
+}
+.input:focus, .textarea:focus { border-color: var(--gray); }
+.textarea { resize: vertical; min-height: 100px; }
+.radio {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 16px; border-radius: 10px;
+  background: var(--black-03); border: 1px solid var(--dark-gray);
+  cursor: pointer; transition: border-color 0.2s;
+}
+.radio input { accent-color: var(--white); }
+.radioLabel { font: 500 16px/1.2em 'Satoshi', sans-serif; color: var(--white); }
+.submitBtn {
+  width: 240px; height: 49px; border-radius: 132px;
+  background: var(--white); color: var(--black-01);
+  font: 500 16px/1.2em 'Clash Grotesk', sans-serif;
+  cursor: pointer; border: none; transition: background 0.2s;
+}
+.submitBtn:hover { background: var(--hover-gray); }
+.faqLayout { display: flex; gap: 40px; align-items: flex-start; }
+.faqList { display: flex; flex-direction: column; gap: 20px; flex: 1; }
+
+@media (max-width: 810px) {
+  .heroLayout { flex-direction: column; }
+  .form { max-width: 100%; }
+  .faqLayout { flex-direction: column; }
+}
+@media (max-width: 390px) {
+  .submitBtn { width: 100%; }
+}
